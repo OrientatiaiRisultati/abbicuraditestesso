@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects.
+# Old landing paths (pensa-meno.pages.dev and pensa-meno.abbicuraditestesso.it used /v1/ ... /v3/ at the root).
+/v1/*   /pensa-meno/v1/:splat   301
+/v2/*   /pensa-meno/v2/:splat   301
+/v3/*   /pensa-meno/v3/:splat   301
+/privacy  /privacy/  301
