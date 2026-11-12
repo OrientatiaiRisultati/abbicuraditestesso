@@ -253,10 +253,44 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <p style="margin: 0; font-size: 15px; color: #46564F">Spedizione gratuita · Garanzia 30 giorni</p>
 </section>
 
-<footer style="padding: 24px 20px 96px; border-top: 1px solid #C2CCC3; font-size: 13px; line-height: 1.5; color: #46564F; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0">Pagina indipendente gestita da Fabio Deriu. Il pulsante d'acquisto porta al sito ufficiale dell'editore, New Era Publications: l'ordine, il pagamento e la garanzia sono gestiti da loro. Su alcuni acquisti potremmo ricevere una commissione.</p>
-<p style="margin: 0">Questo libro non sostituisce il parere di un medico.</p>
-<p style="margin: 0">[Nota marchio da approvazione editore] · <a href="/privacy/">Privacy</a> · <a href="mailto:info@abbicuraditestesso.it">Contatti</a></p>
+<footer class="site-footer">
+<style>
+.site-footer{background:#1E3A32;color:#F4F1EC;font-family:'Source Sans 3',system-ui,sans-serif;text-align:left;padding:40px 16px 104px}
+.site-footer .sf-in{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.site-footer .sf-brand{font-family:'DM Serif Display',Georgia,serif;font-size:24px;line-height:1.2;margin:0 0 6px}
+.site-footer .sf-tag{font-family:'DM Serif Display',Georgia,serif;font-style:italic;opacity:.85;margin:0}
+.site-footer h2{font-family:'Source Sans 3',system-ui,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin:0 0 10px;font-weight:700}
+.site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.site-footer a{color:#F4F1EC;text-decoration:underline;text-decoration-color:#E8C35E;text-underline-offset:3px;display:inline-block;padding:4px 0}
+.site-footer a:hover{color:#E8C35E}
+.site-footer p{margin:0;font-size:15px;line-height:1.6}
+.site-footer .sf-bottom{max-width:1040px;margin:28px auto 0;padding-top:18px;border-top:1px solid rgba(244,241,236,.2);display:flex;flex-direction:column;gap:8px}
+.site-footer .sf-note,.site-footer .sf-copy{font-size:13px;opacity:.8}
+@media (max-width:720px){.site-footer .sf-in{grid-template-columns:1fr;text-align:center}.site-footer ul{align-items:center}.site-footer .sf-bottom{text-align:center}}
+</style>
+<div class="sf-in">
+<div>
+<p class="sf-brand">Abbi Cura di Te Stesso</p>
+<p class="sf-tag">Pensa meno. Vivi di più.</p>
+</div>
+<nav aria-label="Link del sito">
+<h2>Informazioni</h2>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/privacy/">Privacy policy</a></li>
+<li><a href="/privacy/#cookie">Cookie</a></li>
+</ul>
+</nav>
+<div>
+<h2>Contatti</h2>
+<p><a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a></p>
+<p>Un progetto di Orientati ai Risultati di Fabio Deriu<br>Via Baronale 42, 09034 Villasor (CA)<br>P.IVA IT04168620922</p>
+</div>
+</div>
+<div class="sf-bottom">
+<p class="sf-note">Alcuni link di questa pagina portano al sito dell’editore: sugli acquisti effettuati tramite questi link potremmo ricevere una commissione. I contenuti di questa pagina non sostituiscono il parere di un medico.</p>
+<p class="sf-copy">© 2026 Abbi Cura di Te Stesso · Orientati ai Risultati di Fabio Deriu</p>
+</div>
 </footer>
 
 </main>
