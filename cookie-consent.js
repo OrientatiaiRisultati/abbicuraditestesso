@@ -1,5 +1,5 @@
 /*!
- * cookie-consent.js v1.1.0
+ * cookie-consent.js v1.1.1
  * Banner dei cookie riutilizzabile, senza dipendenze.
  * Orientati ai Risultati — licenza MIT.
  *
@@ -498,6 +498,18 @@
     observer.observe(document.documentElement, { childList: true, subtree: true });
   }
 
+  // Cancella i cookie di prima parte dei servizi che ora NON sono consentiti.
+  // Serve anche a ogni caricamento: uno script già partito (es. GA4) può riscrivere
+  // i suoi cookie negli istanti prima del ricaricamento che segue una revoca.
+  function cleanupDenied() {
+    var patterns = [];
+    services.forEach(function (s) {
+      if (s.category === 'necessary') return;
+      if (!allowed(s.category) && !serviceAllowed(s.id)) patterns = patterns.concat(s.cookies || []);
+    });
+    deleteCookies(patterns);
+  }
+
   /* =====================================================================
    * 7. SALVATAGGIO, REVOCA, LOG
    * ===================================================================== */
@@ -569,7 +581,7 @@
         if (revokedNow) patterns = patterns.concat(s.cookies || []);
       });
       deleteCookies(patterns);
-      if (cfg.reloadOnRevoke) { setTimeout(function () { location.reload(); }, 50); return; }
+      if (cfg.reloadOnRevoke) { setTimeout(function () { cleanupDenied(); location.reload(); }, 50); return; }
     }
 
     scan(document); // attiva ciò che ora è consentito
@@ -923,6 +935,7 @@
     });
 
     function ready() {
+      cleanupDenied();  // via i cookie rimasti di servizi non consentiti (revoche, scadenze, versioni precedenti)
       pushDataLayer(); // consenso già salvato: GTM lo riceve a ogni pagina
       scan(document);
       observe();
@@ -940,7 +953,7 @@
   }
 
   var api = {
-    version: '1.1.0',
+    version: '1.1.1',
     presets: PRESETS,
     init: init,
     /** Mostra il banner di primo livello */
