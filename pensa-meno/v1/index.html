@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Banner cookie OAR: configurazione e componente. Devono stare PRIMA di qualsiasi tag di tracciamento. -->
+<script src="/cookie-config.js"></script>
+<script src="/cookie-consent.js"></script>
+<!-- Google Analytics 4: parte solo con il consenso "Statistica". ID FITTIZIO: sostituire G-DEMO123456 con quello vero (2 punti). -->
+<script type="text/plain" data-consent="analytics" data-service="ga4" data-src="https://www.googletagmanager.com/gtag/js?id=G-DEMO123456"></script>
+<script type="text/plain" data-consent="analytics" data-service="ga4">
+  gtag('js', new Date());
+  gtag('config', 'G-DEMO123456');
+</script>
+<!-- Meta Pixel: parte solo con il consenso "Marketing". ID FITTIZIO: sostituire 000000000000000 con quello vero. Nessun <noscript>. -->
+<script type="text/plain" data-consent="marketing" data-service="meta-pixel">
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '000000000000000');
+  fbq('track', 'PageView');
+</script>
 <meta name="robots" content="noindex, nofollow">
 <title>Pensi troppo? Pensa meno, vivi di più</title>
 <meta name="description" content="Dietro il continuo rimuginare c'è un meccanismo preciso della mente. Scopri cos'è.">
@@ -26,7 +45,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <img id="hero" src="/pensa-meno/img/ferie.jpg" alt="Un uomo in spiaggia su una sdraio con un groviglio di pensieri sopra la testa. Testo: Sei in ferie. La tua mente no." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block">
 <div style="padding: 28px 20px 36px; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 21px; line-height: 1.45">Non è un difetto di carattere, e non è mancanza di forza di volontà. Dietro il continuo rimuginare c'è <strong>un meccanismo preciso della mente</strong>. Finché non sai cos'è, continua a lavorare a tua insaputa.</p>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="hero" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
 <p style="margin: 0; font-size: 15px; color: #4A4F5C; text-align: center">Spedizione gratuita · Garanzia 30 giorni soddisfatti o rimborsati</p>
 </div>
 </section>
@@ -42,7 +61,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <p style="margin: 0; font-size: 18px; line-height: 1.55">Ti hanno detto di "non pensarci", di "staccare", di "pensare positivo". Ci hai provato. Eppure i pensieri tornano, sempre gli stessi.</p>
 <p style="margin: 0; font-size: 18px; line-height: 1.55">Non dipende da quanto ti sforzi. Molti dei pensieri che ci tengono in ostaggio non nascono da una scelta: arrivano da una parte della mente che lavora sotto la superficie e fissa la nostra attenzione senza chiederci il permesso.</p>
 <p style="margin: 0; font-size: 18px; line-height: 1.55"><strong>Che cos'è, esattamente? E come si fa a fermarlo?</strong> È ciò che spiega Dianetics, uno dei libri sulla mente più letti di sempre.</p>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Voglio capire come funziona</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-2" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Voglio capire come funziona</a>
 </section>
 
 <section style="padding: 40px 20px; display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center">
@@ -55,7 +74,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <div style="background: #F4F1EC; border-radius: 10px; padding: 14px 8px; font-size: 14px; line-height: 1.35"><strong style="display: block; font-size: 16px">30 giorni</strong>soddisfatti o rimborsati</div>
 <div style="background: #F4F1EC; border-radius: 10px; padding: 14px 8px; font-size: 14px; line-height: 1.35"><strong style="display: block; font-size: 16px">Pagamento</strong>PayPal e carte</div>
 </div>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina dal sito dell'editore</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-3" style="width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina dal sito dell'editore</a>
 </section>
 
 <section style="padding: 40px 20px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
@@ -196,7 +215,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 </div>
 
 </div>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-4" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
 <div style="display: flex; flex-direction: column; gap: 8px">
 
 <div class="fbc" style="display:flex;gap:8px;align-items:flex-start;text-align:left;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
@@ -343,7 +362,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 </div>
 
 </div>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Voglio leggerlo anch'io</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-5" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Voglio leggerlo anch'io</a>
 </section>
 
 <section style="padding: 40px 20px; display: flex; flex-direction: column; gap: 18px">
@@ -386,7 +405,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <p style="margin: 0; font-size: 18px; line-height: 1.55">Quasi tutti i libri sul benessere dicono la stessa cosa: cambia atteggiamento. Ma se fosse così semplice, lo avresti già fatto.</p>
 <p style="margin: 0; font-size: 18px; line-height: 1.55">Il punto non è <em>cosa</em> pensi, ma <em>perché</em> certi pensieri continuano a tornare anche quando non li vuoi. Dianetics descrive la struttura della mente, conscia e non, e mostra da dove arriva ciò che ti condiziona a tua insaputa.</p>
 <p style="margin: 0; font-size: 18px; line-height: 1.55">È per questo che oltre 22 milioni di persone l'hanno letto. Scoprilo da te.</p>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina ora – spedizione gratuita</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-6" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina ora – spedizione gratuita</a>
 </section>
 
 <section style="padding: 40px 20px; display: flex; flex-direction: column; gap: 16px">
@@ -427,7 +446,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <strong style="font-size: 17px">4,9 su 5 su Trustpilot · 459 recensioni</strong>
 <span style="font-size: 15px; color: #4A4F5C; text-decoration: underline">Leggi le recensioni dell'editore New Era Publications</span>
 </a>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-7" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Scopri il libro – 20 €</a>
 </section>
 
 <section style="padding: 40px 20px; background: #F4F1EC; display: flex; flex-direction: column; gap: 14px">
@@ -474,7 +493,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 
 <section style="padding: 40px 20px 48px; display: flex; flex-direction: column; gap: 14px; text-align: center">
 <h2 style="margin: 0; font-size: 34px; line-height: 1.15">Pensa meno. <em>Vivi di più.</em></h2>
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina il libro – 20 €</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="cta-8" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 19px; text-decoration: none; padding: 0 20px">Ordina il libro – 20 €</a>
 <p style="margin: 0; font-size: 15px; color: #4A4F5C">Spedizione gratuita · Garanzia 30 giorni</p>
 </section>
 
@@ -512,11 +531,12 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 <li><a href="/">Home</a></li>
 <li><a href="/privacy/">Privacy policy</a></li>
 <li><a href="/privacy/#cookie">Cookie</a></li>
+<li><a href="#preferenze-cookie" data-cc="preferences">Preferenze cookie</a></li>
 </ul>
 </nav>
 <div>
 <h2>Contatti</h2>
-<p><a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a></p>
+<p><a href="mailto:info@abbicuraditestesso.it" data-track="contatto">info@abbicuraditestesso.it</a></p>
 <p>Un progetto di Orientati ai Risultati di Fabio Deriu<br>Via Baronale 42, 09034 Villasor (CA)<br>P.IVA IT04168620922</p>
 </div>
 </div>
@@ -527,10 +547,11 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
 </footer>
 
 <div style="position: sticky; bottom: 0; width: 100%; background: #1B2338; padding: 10px 16px; box-sizing: border-box; display: flex; justify-content: center">
-<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" style="width: 100%; max-width: 568px; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 17px; text-decoration: none">Ordina – 20 € · spedizione gratuita</a>
+<a href="https://newerapub.com/it/item/dianetics-the-modern-science-of-mental-health-softcover/?ref=575" data-track="acquisto" data-track-label="barra-fissa" style="width: 100%; max-width: 568px; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 10px; background: #E07B56; color: #1B2338; font-weight: 700; font-size: 17px; text-decoration: none">Ordina – 20 € · spedizione gratuita</a>
 </div>
 
 </div>
+<script src="/tracking.js"></script>
 <script>
 (function(){
   var heroes = {"ferie":{"src":"/pensa-meno/img/ferie.jpg","alt":"Un uomo in spiaggia su una sdraio con un groviglio di pensieri sopra la testa. Testo: Sei in ferie. La tua mente no."},"tavola":{"src":"/pensa-meno/img/tavola.jpg","alt":"Un ragazzo assorto a una cena tra amici sorridenti, con un groviglio di pensieri sopra la testa. Testo: Sei seduto a tavola. La tua mente è da tutt'altra parte."},"presa":{"src":"/pensa-meno/img/presa.jpg","alt":"Un uomo cammina sereno mentre i pensieri aggrovigliati si sciolgono dietro di lui. Testo: E se i tuoi pensieri lasciassero la presa? Pensa meno. Vivi di più."}};
@@ -571,7 +592,7 @@ h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
       box.appendChild(icon); box.appendChild(h); box.appendChild(t); box.appendChild(n);
       f.replaceWith(box);
       try { box.scrollIntoView({ behavior: 'smooth', block: 'center' }); box.focus({ preventScroll: true }); } catch (e) {}
-      try { if (window.fbq) fbq('track', 'Lead'); } catch (e) {}
+      if (window.oarTrack) oarTrack('lead'); // solo con consenso (vedi /tracking.js)
     };
     fetch(f.action + (f.action.indexOf('?') < 0 ? '?' : '&') + 'isAjax=1', { method: 'POST', body: new FormData(f), mode: 'no-cors' })
       .then(done, function () { if (btn) { btn.disabled = false; btn.textContent = 'Iscrivetemi'; } alert('Non è stato possibile completare l’iscrizione. Riprova tra poco.'); });

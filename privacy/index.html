@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Banner cookie OAR: configurazione e componente. Devono stare PRIMA di qualsiasi tag di tracciamento. -->
+<script src="/cookie-config.js"></script>
+<script src="/cookie-consent.js"></script>
+<!-- Google Analytics 4: parte solo con il consenso "Statistica". ID FITTIZIO: sostituire G-DEMO123456 con quello vero (2 punti). -->
+<script type="text/plain" data-consent="analytics" data-service="ga4" data-src="https://www.googletagmanager.com/gtag/js?id=G-DEMO123456"></script>
+<script type="text/plain" data-consent="analytics" data-service="ga4">
+  gtag('js', new Date());
+  gtag('config', 'G-DEMO123456');
+</script>
+<!-- Meta Pixel: parte solo con il consenso "Marketing". ID FITTIZIO: sostituire 000000000000000 con quello vero. Nessun <noscript>. -->
+<script type="text/plain" data-consent="marketing" data-service="meta-pixel">
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '000000000000000');
+  fbq('track', 'PageView');
+</script>
 <title>Privacy policy – Abbi Cura di Te Stesso</title>
 <meta name="description" content="Informativa sul trattamento dei dati personali di Abbi Cura di Te Stesso: newsletter, webinar e seminari in presenza.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +51,7 @@ th{font-weight:700}
 <main>
 <a class="back" href="javascript:history.back()">← Torna indietro</a>
 <h1>Privacy policy</h1>
-<p class="meta">Abbi Cura di Te Stesso · Ultimo aggiornamento: 11 novembre 2026</p>
+<p class="meta">Abbi Cura di Te Stesso · Ultimo aggiornamento: 20 novembre 2026</p>
 
 <p>Questa informativa spiega come trattiamo i tuoi dati personali quando visiti le pagine di Abbi Cura di Te Stesso, ti iscrivi alla newsletter o partecipi ai nostri webinar, seminari e corsi. È resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679 ("GDPR") e del D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018.</p>
 
@@ -51,8 +70,8 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <p>Il tuo indirizzo email, la data dell'iscrizione e il consenso che hai espresso. Raccogliamo inoltre dati statistici sull'apertura delle email e sui clic ai link contenuti, per capire quali contenuti sono più utili.</p>
 <h3>c) Iscrizione a webinar e seminari in presenza</h3>
 <p>Nome e cognome, indirizzo email, numero di telefono (facoltativo), città o zona di provenienza, l'evento a cui ti iscrivi e la tua partecipazione. Per gli eventi a pagamento, anche i dati necessari alla fatturazione (ad esempio codice fiscale e indirizzo). Per i webinar, la piattaforma utilizzata può registrare il nome con cui ti colleghi e la durata della connessione.</p>
-<h3>d) Dati pubblicitari (solo con il tuo consenso)</h3>
-<p>Se acconsenti tramite il banner dei cookie, utilizziamo il pixel di Meta (Facebook e Instagram) per misurare l'efficacia dei nostri annunci, ad esempio per sapere quante persone si iscrivono alla newsletter dopo aver visto un annuncio.</p>
+<h3>d) Dati statistici e pubblicitari (solo con il tuo consenso)</h3>
+<p>Se acconsenti tramite il banner dei cookie, utilizziamo Google Analytics 4 per statistiche sull'uso delle pagine e il pixel di Meta (Facebook e Instagram) per misurare l'efficacia dei nostri annunci, ad esempio per sapere quante persone si iscrivono alla newsletter o visitano il sito dell'editore dopo aver visto un annuncio. I due consensi sono separati: puoi accettarne uno solo.</p>
 <p>Non raccogliamo dati relativi alla salute o altre categorie particolari di dati. Ti chiediamo di non inviarceli nelle comunicazioni con noi.</p>
 
 <h2>3. Perché trattiamo i dati e su quale base giuridica</h2>
@@ -66,6 +85,7 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <tr><td>Inviti a eventi successivi a chi ha già partecipato a un nostro evento</td><td>Consenso (art. 6.1.a GDPR), raccolto al momento dell'iscrizione all'evento</td></tr>
 <tr><td>Foto e video durante gli eventi, per la loro documentazione e comunicazione</td><td>Consenso specifico (art. 6.1.a GDPR), raccolto di volta in volta</td></tr>
 <tr><td>Fatturazione e adempimenti fiscali per eventi a pagamento</td><td>Obbligo di legge (art. 6.1.c GDPR)</td></tr>
+<tr><td>Statistiche sull'uso delle pagine (Google Analytics 4)</td><td>Consenso (art. 6.1.a GDPR e art. 122 Codice Privacy)</td></tr>
 <tr><td>Misurazione delle campagne pubblicitarie (pixel Meta)</td><td>Consenso (art. 6.1.a GDPR e art. 122 Codice Privacy)</td></tr>
 <tr><td>Tutela dei nostri diritti in caso di contestazioni</td><td>Legittimo interesse (art. 6.1.f GDPR)</td></tr>
 </tbody>
@@ -81,6 +101,7 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <li><strong>Brevo</strong> (Sendinblue SAS, Francia): invio della newsletter e gestione delle iscrizioni.</li>
 <li><strong>Cloudflare, Inc.</strong> (Stati Uniti): hosting e protezione delle pagine web.</li>
 <li><strong>Aruba S.p.A.</strong> (Italia): dominio e caselle di posta elettronica.</li>
+<li><strong>Google Ireland Ltd.</strong> (Irlanda): statistiche con Google Analytics 4, solo se hai dato il consenso.</li>
 <li><strong>Meta Platforms Ireland Ltd.</strong> (Irlanda): pixel pubblicitario, solo se hai dato il consenso.</li>
 <li>La <strong>piattaforma utilizzata per i webinar</strong>, indicata nell'invito a ciascun evento.</li>
 <li>Eventuali collaboratori che ci aiutano nell'organizzazione degli eventi in presenza, vincolati alla riservatezza.</li>
@@ -89,7 +110,7 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <p><strong>Acquisto del libro.</strong> Il pulsante d'acquisto presente nelle nostre pagine porta al sito dell'editore, New Era Publications International ApS (Danimarca), dove avvengono l'ordine e il pagamento. I dati dell'ordine sono trattati dall'editore secondo la propria informativa privacy, pubblicata sul suo sito. Il link contiene un codice che permette all'editore di riconoscere che la visita proviene dalle nostre pagine.</p>
 
 <h2>6. Trasferimenti fuori dall'Unione europea</h2>
-<p>Alcuni fornitori (ad esempio Cloudflare e, per alcune attività, Meta) possono trattare dati negli Stati Uniti. In questi casi il trasferimento avviene sulla base della decisione di adeguatezza della Commissione europea relativa al EU-U.S. Data Privacy Framework, per le società certificate, oppure delle Clausole contrattuali standard approvate dalla Commissione.</p>
+<p>Alcuni fornitori (ad esempio Cloudflare e, per alcune attività, Google e Meta) possono trattare dati negli Stati Uniti. In questi casi il trasferimento avviene sulla base della decisione di adeguatezza della Commissione europea relativa al EU-U.S. Data Privacy Framework, per le società certificate, oppure delle Clausole contrattuali standard approvate dalla Commissione.</p>
 
 <h2>7. Per quanto tempo conserviamo i dati</h2>
 <ul>
@@ -115,7 +136,20 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <p>Se ritieni che il trattamento violi la normativa, puoi presentare reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
 
 <h2 id="cookie">9. Cookie</h2>
-<p>Le nostre pagine usano solo cookie tecnici, necessari al funzionamento, che non richiedono consenso. Il pixel di Meta e altri strumenti di misurazione pubblicitaria vengono attivati solo se li accetti tramite il banner dei cookie, dove puoi anche cambiare idea in qualsiasi momento.</p>
+<p>I cookie sono piccoli file che un sito salva sul tuo dispositivo. Le nostre pagine usano cookie tecnici, necessari al funzionamento, che non richiedono consenso (art. 122 Codice Privacy). Gli strumenti di statistica e di misurazione pubblicitaria vengono caricati <strong>solo se li accetti</strong> tramite il banner dei cookie: finché non scegli non parte nulla, e se chiudi il banner con la X o scegli "Rifiuta" restano disattivati. La tua scelta viene ricordata per 6 mesi.</p>
+<div class="wrap">
+<table>
+<thead><tr><th>Categoria</th><th>Servizio e fornitore</th><th>Finalità</th><th>Cookie e durata</th></tr></thead>
+<tbody>
+<tr><td>Tecnici (sempre attivi)</td><td>Preferenze cookie — Abbi Cura di Te Stesso</td><td>Ricordare la tua scelta sui cookie</td><td>cc_consent: 6 mesi</td></tr>
+<tr><td>Tecnici (sempre attivi)</td><td>Cloudflare, Inc.</td><td>Protezione del sito dal traffico automatico, se attiva</td><td>__cf_bm: 30 minuti</td></tr>
+<tr><td>Statistica (con consenso)</td><td>Google Analytics 4 — Google Ireland Ltd. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">informativa</a>)</td><td>Statistiche sull'uso delle pagine</td><td>_ga, _ga_&lt;ID&gt;: 2 anni</td></tr>
+<tr><td>Marketing (con consenso)</td><td>Meta Pixel — Meta Platforms Ireland Ltd. (<a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">informativa</a>)</td><td>Misurare le conversioni degli annunci su Facebook e Instagram e mostrare annunci pertinenti</td><td>_fbp, _fbc: 3 mesi; altri cookie sul dominio di Meta se hai un account</td></tr>
+</tbody>
+</table>
+</div>
+<p>Per contare le visite in forma aggregata usiamo anche Cloudflare Web Analytics, che non usa cookie né identificatori sul tuo dispositivo e quindi non richiede consenso.</p>
+<p><strong>Come cambiare idea:</strong> clicca su "Preferenze cookie" in fondo a ogni pagina oppure qui: <a href="#preferenze-cookie" data-cc="preferences">apri le preferenze cookie</a>. Se revochi un consenso cancelliamo, per quanto tecnicamente possibile, i relativi cookie. Puoi anche eliminare i cookie dalle impostazioni del browser.</p>
 
 <h2>10. Minori</h2>
 <p>La newsletter, i webinar e i seminari sono rivolti a persone maggiorenni. Non raccogliamo consapevolmente dati di minori di 18 anni. Se pensi che un minore ci abbia fornito i suoi dati, scrivici e li cancelleremo.</p>
@@ -154,11 +188,12 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <li><a href="/">Home</a></li>
 <li><a href="/privacy/">Privacy policy</a></li>
 <li><a href="/privacy/#cookie">Cookie</a></li>
+<li><a href="#preferenze-cookie" data-cc="preferences">Preferenze cookie</a></li>
 </ul>
 </nav>
 <div>
 <h2>Contatti</h2>
-<p><a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a></p>
+<p><a href="mailto:info@abbicuraditestesso.it" data-track="contatto">info@abbicuraditestesso.it</a></p>
 <p>Un progetto di Orientati ai Risultati di Fabio Deriu<br>Via Baronale 42, 09034 Villasor (CA)<br>P.IVA IT04168620922</p>
 </div>
 </div>
@@ -167,5 +202,6 @@ Email: <a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a
 <p class="sf-copy">© 2026 Abbi Cura di Te Stesso · Orientati ai Risultati di Fabio Deriu</p>
 </div>
 </footer>
+<script src="/tracking.js"></script>
 </body>
 </html>

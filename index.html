@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Banner cookie OAR: configurazione e componente. Devono stare PRIMA di qualsiasi tag di tracciamento. -->
+<script src="/cookie-config.js"></script>
+<script src="/cookie-consent.js"></script>
+<!-- Google Analytics 4: parte solo con il consenso "Statistica". ID FITTIZIO: sostituire G-DEMO123456 con quello vero (2 punti). -->
+<script type="text/plain" data-consent="analytics" data-service="ga4" data-src="https://www.googletagmanager.com/gtag/js?id=G-DEMO123456"></script>
+<script type="text/plain" data-consent="analytics" data-service="ga4">
+  gtag('js', new Date());
+  gtag('config', 'G-DEMO123456');
+</script>
+<!-- Meta Pixel: parte solo con il consenso "Marketing". ID FITTIZIO: sostituire 000000000000000 con quello vero. Nessun <noscript>. -->
+<script type="text/plain" data-consent="marketing" data-service="meta-pixel">
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '000000000000000');
+  fbq('track', 'PageView');
+</script>
 <meta name="robots" content="noindex, nofollow">
 <title>Abbi Cura di Te Stesso</title>
 <meta name="description" content="Abbi Cura di Te Stesso: spunti, incontri e letture per pensare meno e vivere di più.">
@@ -60,11 +79,12 @@ p{margin:0;font-size:18px;line-height:1.55}
 <li><a href="/">Home</a></li>
 <li><a href="/privacy/">Privacy policy</a></li>
 <li><a href="/privacy/#cookie">Cookie</a></li>
+<li><a href="#preferenze-cookie" data-cc="preferences">Preferenze cookie</a></li>
 </ul>
 </nav>
 <div>
 <h2>Contatti</h2>
-<p><a href="mailto:info@abbicuraditestesso.it">info@abbicuraditestesso.it</a></p>
+<p><a href="mailto:info@abbicuraditestesso.it" data-track="contatto">info@abbicuraditestesso.it</a></p>
 <p>Un progetto di Orientati ai Risultati di Fabio Deriu<br>Via Baronale 42, 09034 Villasor (CA)<br>P.IVA IT04168620922</p>
 </div>
 </div>
@@ -73,5 +93,6 @@ p{margin:0;font-size:18px;line-height:1.55}
 <p class="sf-copy">© 2026 Abbi Cura di Te Stesso · Orientati ai Risultati di Fabio Deriu</p>
 </div>
 </footer>
+<script src="/tracking.js"></script>
 </body>
 </html>
