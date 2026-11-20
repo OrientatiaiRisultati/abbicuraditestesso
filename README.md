@@ -15,6 +15,7 @@ Sito statico di **Abbi Cura di Te Stesso**, pubblicato con Cloudflare Pages.
 | `cookie-config.js` | Configurazione del banner cookie (servizi, link alle policy, colori) |
 | `cookie-consent.js` | Banner cookie OAR (componente: non modificarlo per questo sito) |
 | `tracking.js` | Eventi di conversione (ClicAcquisto, Lead, Contact), solo con consenso |
+| `fonts/` | Font DM Serif Display e Source Sans 3 serviti dal sito (niente Google Fonts: nessuna richiesta a Google prima del consenso) |
 
 ## Parametri utili delle landing
 
